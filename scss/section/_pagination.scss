@@ -1,0 +1,35 @@
+.pagination {
+position: fixed;
+top: 96px;
+right: 455px;
+z-index: 2000;   
+}
+.pagination__item {
+position: relative;
+    &:hover .pagination__link:after {
+    border: 1px solid $white;    
+    }    
+}
+.pagination__link {
+display: block;    
+width: 6px;
+height: 6px;
+background-color: $white;
+border: 1px solid $white;
+border-radius: 50%;
+margin-bottom: 15px;
+    &:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: transparent;
+    transition: all .5s;
+    }
+    &--active:after {
+    border: 1px solid $white;    
+    }    
+}

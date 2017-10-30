@@ -1,0 +1,43 @@
+.benefits {
+background-image: url('../images/benefits/benefits-bg.png');
+background-repeat: no-repeat;
+background-position: center bottom;
+background-size: cover;
+padding: 73px 0 0;
+text-align: center;
+}
+.benefits__list {
+display: flex;
+flex-flow: row wrap;
+justify-content: space-between;
+margin: 75px 0 0;
+}
+.benefits__item {
+flex-basis: 32%;
+text-align: center;  
+} 
+.benefits__icon {
+width: 100px;
+height: 100px;  
+background-position: center center;
+background-repeat: no-repeat;
+margin: 0 auto 25px;  
+}
+.benefits__icon--1 {
+background-image: url("../images/benefits/benefits-icon-1.png");  
+}
+.benefits__icon--2 {
+background-image: url("../images/benefits/benefits-icon-2.png");  
+}
+.benefits__icon--3 {
+background-image: url("../images/benefits/benefits-icon-3.png");  
+}
+.benefits__title {
+font-family: 'Lifehack-Medium';
+font-size: 24px;
+line-height: 28px;
+}
+.benefits__description {
+margin: 19px 0 0;
+line-height: 22px;
+}
