@@ -1,0 +1,43 @@
+.pagination {
+position: fixed;
+top: 14.7%;
+right: 5.5%;
+z-index: 2000; 
+}
+.pagination__item {
+position: relative;
+margin-bottom: 21px;
+    &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background-color: $white;
+    border: 1px solid $white;
+    border-radius: 50%;
+    transition: all .5s;
+    }
+    &:hover .pagination__link:after {
+    border: 1px solid $white;    
+    }    
+}
+.pagination__link {
+display: block;    
+overflow: hidden;
+    &:after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: transparent;
+    transition: all .5s;
+    }
+    &--active:after {
+    border: 1px solid $white;    
+    }    
+}
