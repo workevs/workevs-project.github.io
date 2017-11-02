@@ -14,7 +14,16 @@ margin: 75px 0 0;
 }
 .benefits__item {
 flex-basis: 32%;
-text-align: center;  
+text-align: center;
+    span {
+    font-family: 'Lifehack-Medium';
+    font-size: 24px;
+    line-height: 28px;
+    }
+    p {
+    margin: 19px 0 0;
+    line-height: 22px;  
+    }  
 } 
 .benefits__icon {
 width: 100px;
@@ -31,13 +40,4 @@ background-image: url("../images/benefits/benefits-icon-2.png");
 }
 .benefits__icon--3 {
 background-image: url("../images/benefits/benefits-icon-3.png");  
-}
-.benefits__title {
-font-family: 'Lifehack-Medium';
-font-size: 24px;
-line-height: 28px;
-}
-.benefits__description {
-margin: 19px 0 0;
-line-height: 22px;
 }
