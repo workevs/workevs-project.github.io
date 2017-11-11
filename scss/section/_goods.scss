@@ -1,0 +1,213 @@
+.goods {
+position: relative;  
+background-image: url('../images/goods/goods-bg.png');
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+overflow: hidden;  
+}
+.goods-slider {
+position: relative;
+margin: rem(84px) 0;
+  @include tablet {
+  width: 80%;
+  margin: rem(130px) auto 0;
+  text-align: center;
+  }
+  @include phone {
+    margin: rem(85px) auto 0;
+  }  
+  &__arrow {
+  position: absolute;
+  top: 48%;  
+  width: rem(30px);
+  height: rem(30px);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+    @include tablet {
+    top: 47.3%;
+    }
+    @include phone {
+    top:37.4%;
+    }
+    &--left {
+    left: rem(-41px);  
+    background-image: url('../images/goods/arrow-left.png');
+      @include tablet {
+      left: rem(-53px);
+      }  
+    }
+    &--right {
+    right: rem(-41px);  
+    background-image: url('../images/goods/arrow-right.png');
+      @include tablet {
+      right: rem(-53px);
+      }  
+    }   
+  }
+  &__item {
+  position: relative;  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;   
+  }
+  &__draw {
+  flex-basis:49%;
+  position: relative;
+  padding: rem(77px) 0 0 rem(1px);
+    @include tablet {
+    flex-basis:100%;
+    }
+    img {
+      @include tablet {
+      margin: 0 auto;
+      } 
+    }  
+  }
+  &__description {
+  flex-basis:49%;
+    @include tablet {
+    flex-basis:100%;
+    } 
+    p {
+    color:$white;
+    margin: rem(38px) 0 0 rem(1px);
+    line-height: rem(23px);
+      @include tablet {
+      margin: rem(18px) 0 0;
+      }    
+    }
+    .content__title {
+      @include tablet {
+      width: 90%;
+      margin: rem(43px) auto 0;
+      }   
+    }  
+  }
+  &__calories {
+  flex-basis:100%;
+    @include tablet {
+    position: absolute;
+    right: rem(56px);
+    top: rem(-6px);
+    }
+    @include phone {
+    position: absolute;
+    right: rem(-48px);
+    top: rem(-43px);
+    }
+  }
+  &__action {
+  display: flex;
+  align-items: center;
+    @include tablet {
+    justify-content: center;
+    padding: rem(10px) 0 0;
+    }   
+    .button {
+    margin: rem(41px) 0 0;  
+    }  
+  }
+  &__cost {
+  color:$orange;;
+  font-family: 'Gagalin-Regular';
+  font-size: rem(28px);
+  margin: rem(11px) rem(27px) 0 rem(1px);
+    span {
+    font-size: rem(70px);
+    }  
+  }
+}
+.calories {
+position: relative;
+background-image: url("../images/goods/kkal.png");
+background-repeat: no-repeat;
+background-position: top left;
+width: rem(60px);
+height: rem(80px);
+font-family: 'Gagalin-Regular';
+color: #f9d4af;
+text-align: center;
+margin: rem(10px) 0 0;
+    div {
+    position: absolute;
+    top: 31%;
+    left: 0;
+    right: 0;
+    margin: 0 auto rem(15px);
+    font-size: rem(19px);
+    }
+    span {
+    position: absolute;
+    top:75%;
+    left: 0;
+    right: 0;  
+    font-size: rem(14px);
+    }  
+}
+.composition {
+position: absolute;
+top:rem(6px);
+left: 0;
+  @include tablet {
+  left: rem(55px);
+  top: rem(3px);
+  }
+  @include phone {
+    left: rem(-48px);
+    top: rem(-34px);
+    }  
+  &__menu {
+  display: flex;
+  flex-flow: row nowrap;  
+  }
+  &__button {
+  width: rem(90px);
+  height: rem(90px);
+  background-image: url("../images/goods/goods-btn.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color:#f08c33;
+  border-radius: rem(5px);
+  transition: all .5s;
+    &:hover {
+    background-color:$orange;
+    }
+    &:hover + .composition__list {
+    opacity: 1;
+    visibility: visible;  
+    }
+  }
+  &__list {  
+  display: flex;
+  flex-flow: column nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .5s; 
+  background: rgba(255,255,255,0.9);
+  border-radius: rem(5px);
+  width: rem(272px);
+  padding: rem(15px) rem(20px);
+  }
+  &__item {
+  display: flex;
+  flex-flow: row nowrap;
+  flex-basis: 100%;
+  justify-content: space-between;
+  align-items: center;
+    &:not(:last-child) {
+    margin: 0 0 rem(10px);  
+    }  
+  }
+  &__icon {
+  width: rem(48px);
+  height: rem(39px);
+  }
+  &__unit {
+  font-family: 'Ubuntu-Medium';
+  padding: 0 0 0 rem(20px);
+  margin-right: auto;
+  }
+}

@@ -1,0 +1,59 @@
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;   
+background-image: url("../images/board-bg.png");
+background-repeat: no-repeat;
+background-position: center bottom;
+background-size: cover;
+height: rem(60px);
+display: flex;
+align-items: center;  
+  &__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;  
+  }
+  &__address {
+  color: $white;
+    div {
+    position: relative;
+    color: $orange;
+    padding: 0 0 0 rem(18px);
+    margin: rem(5px) 0 0;
+    font-family: 'Ubuntu-Medium';
+    letter-spacing: rem(0.2px); 
+      &:before {
+      content: "";
+      background-image: url("../images/icons/phone.svg");
+      width: rem(11px);
+      height: rem(11px);
+      position: absolute;
+      top: 20%;
+      left: 0;
+      }
+    }
+    span {
+    letter-spacing: rem(0.2px);  
+    }
+  }
+  &__social {
+  display: flex;
+  align-items: center;
+  }
+}
+.social-icons {
+display: flex;
+justify-content: space-between;
+flex-flow: row nowrap;
+  &__item {
+  display: flex;
+  align-items: center;  
+    &:not(:last-child) {
+    margin: 0 rem(18px) 0 0;  
+    }
+    img {
+    max-width: rem(22px);  
+    }  
+  }  
+}

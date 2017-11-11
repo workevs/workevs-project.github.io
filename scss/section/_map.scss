@@ -1,0 +1,29 @@
+.map {
+position: relative;  
+background-image: url("../images/map/map-bg.png");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+overflow: hidden;
+    &-markers {
+        &__item {
+        position: absolute;
+            &--1 {
+            top: 130px;
+            left: 500px;    
+            } 
+            &--2 {
+            top: 230px;
+            left: 630px; 
+            } 
+            &--3 {
+            top: 52.1%;
+            left: 75.6%;
+            }     
+            &--4 {
+            top: 67%;
+            left: 46%;
+            } 
+        }
+    }
+}

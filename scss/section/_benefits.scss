@@ -3,41 +3,79 @@ background-image: url('../images/benefits/benefits-bg.png');
 background-repeat: no-repeat;
 background-position: center bottom;
 background-size: cover;
-padding: 73px 0 0;
+padding: rem(73px) 0 0;
 text-align: center;
-}
-.benefits__list {
-display: flex;
-flex-flow: row wrap;
-justify-content: space-between;
-margin: 75px 0 0;
-}
-.benefits__item {
-flex-basis: 32%;
-text-align: center;
+  @include tablet {
+    background-image: url('../images/benefits/768/benefits-bg.png');
+    padding: rem(120px) 0 0;
+  }
+  @include phone {
+    padding: rem(46px) 0 0;
+  }
+  .content__title {
+    @include phone {
+      font-size: rem(50px);
+    } 
+  }  
+  &__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: rem(75px) 0 0;
+    @include tablet {
+      margin: rem(161px) 0 0;
+    }
+    @include phone {
+      padding: 0 rem(16px);
+      margin: rem(65px) 0 0;
+    } 
+  }
+  &__item {
+  flex-basis: 32%;
+  text-align: center;
+    @include phone {
+      flex-basis: 100%;
+      text-align: left;
+    }
+    &:not(:last-child) {
+      @include phone {
+        margin: 0 0 rem(48px);
+      }
+    }
     span {
     font-family: 'Lifehack-Medium';
-    font-size: 24px;
-    line-height: 28px;
+    font-size: rem(24px);
+    line-height: rem(28px);
+      @include phone {
+        font-size: rem(23px);
+      } 
     }
     p {
-    margin: 19px 0 0;
-    line-height: 22px;  
+    margin: rem(16px) 0 0;
+    line-height: rem(23.3px);
+      @include phone {
+        padding: 0 0 0 rem(120px);
+      }  
     }  
-} 
-.benefits__icon {
-width: 100px;
-height: 100px;  
-background-position: center center;
-background-repeat: no-repeat;
-margin: 0 auto 25px;  
-}
-.benefits__icon--1 {
-background-image: url("../images/benefits/benefits-icon-1.png");  
-}
-.benefits__icon--2 {
-background-image: url("../images/benefits/benefits-icon-2.png");  
-}
-.benefits__icon--3 {
-background-image: url("../images/benefits/benefits-icon-3.png");  
+  } 
+  &__icon {
+  width: rem(100px);
+  height: rem(100px);  
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0 auto rem(25px);
+    @include phone {
+      margin: 0 rem(20px) 0 0;
+      float: left;
+    }  
+    &--1 {
+    background-image: url("../images/benefits/benefits-icon-1.png");  
+    }
+    &--2 {
+    background-image: url("../images/benefits/benefits-icon-2.png");  
+    }
+    &--3 {
+    background-image: url("../images/benefits/benefits-icon-3.png");  
+    }
+  }  
 }
