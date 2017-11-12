@@ -2,6 +2,9 @@
 @import "config/_variables.scss";
 @import "config/_mixins.scss";
 
+//singularity
+@import "../node_modules/singularitygs/stylesheets/_singularitygs.scss";
+
 // base
 @import "layout/_normalize.scss";
 @import "layout/_fonts.scss";
@@ -13,3 +16,12 @@
 @import "section/_utp.scss";
 @import "section/_benefits.scss";
 @import "section/_reviews.scss";
+@import "section/_goods.scss";
+@import "section/_team.scss";
+@import "section/_menu.scss";
+@import "section/_map.scss";
+@import "section/_order.scss";
+@import "section/_footer.scss";
+
+//media
+@import "media/_media.scss";

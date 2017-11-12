@@ -8,9 +8,9 @@ overflow: hidden;
   &:after {
   position: absolute;
   content: "";
-  bottom: 32px;
-  width: 30px;
-  height: 30px;
+  bottom: rem(32px);
+  width: rem(30px);
+  height: rem(30px);
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url("../images/arrow-down.png");
@@ -18,81 +18,130 @@ overflow: hidden;
   right: 0;
   margin: auto;
   cursor: pointer;
+    @include phone {
+      bottom: rem(23px);
+    }  
   }
-}
-.utp__header {
-display: flex;
-flex-flow: row wrap;
-justify-content: space-between;
-align-items: center;
-margin: 12px 0 0;
-  .button {
-  margin: -5px 0 0;  
-  }  
+  &__header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: rem(12px) 0 0;
+    .button {
+    margin: rem(-5px) 0 0;
+      @include tablet {
+      margin: 0 rem(65px) 0 0;
+      }   
+    }  
+  }
+  &__content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+    .content__title {
+    margin: rem(138px) 0 0 rem(10px);
+      @include tablet {
+      margin: rem(37px) 0 0;
+      text-align: center;
+      }
+      @include phone {
+        font-size: rem(63px);
+        margin: rem(50px) 0 0;
+      }   
+    }  
+  }
+  &__draw,
+  &__description {
+  flex-basis: 50%;
+    @include tablet {
+    flex-basis: 100%;
+    }
+    @include phone {
+    flex-basis: 90%;
+    margin: 0 auto;
+    }
+  }
+  &__draw {
+  background-image: url('../images/utp/utp-drops.png');
+  background-repeat: no-repeat;
+  background-position: 91% 34%;
+    @include tablet {
+    background-position: 50% 55%;
+    }
+    @include phone {
+    background-image: url('../images/utp/480/utp-drops.png');
+    background-position: 50% 50%;
+    }  
+  }
+  &__img {
+  margin: rem(-6px) 0 0 rem(51px);
+    @include tablet {
+    margin: rem(65px) auto 0;
+    }
+    @include phone {
+    margin: rem(40px) auto 0;
+    width: 70%;
+    }    
+  }
+  &__title {
+  color:$white;
+  font-family: 'Lifehack-Medium';
+  font-size: rem(65px);
+  font-weight: 500;
+  letter-spacing: rem(-1.63px);
+  line-height: rem(60px);
+  margin: rem(29px) 0 0 rem(10px);
+    @include tablet {
+    text-align: center;
+    width: 80%;
+    margin: rem(28px) auto 0;
+    }
+    @include phone {
+      font-size: rem(54px);
+      margin: rem(2px) auto 0;
+    }  
+  }
 }
 .co-logo {
-width: 92px;
+width: rem(92px);
 margin-right: auto;
-margin-left: -3px;  
+margin-left: rem(-3px);  
 }
-.nav__list {
-margin: 0;
-padding: 0;
-}
-.nav__item {
-display: inline-block;
-white-space: nowrap;
-position: relative;
-  &:after {
-  position: absolute;
-  top: 30%;
-  display: inline-block;
-  content: ' ';
-  width: 4px;
-  height: 4px;
-  border-radius: 2.5px;
-  background: $white;
-  }
-  &:last-child:after {
+.nav {
+  @include tablet {
   display: none;
   }
-}
-.nav__link {
-color:$white;
-font-size: 13px;
-font-weight: 700;
-text-transform: uppercase;
-display: inline-block;
-padding: 0 16.4px;
-vertical-align: super;
-transition: .5s;
-}
-.utp__content {
-display: flex;
-flex-flow: row wrap;
-justify-content: space-between;
-  .content__title {
-  margin: 133px 0 0 10px;
-  }  
-}
-.utp__draw,
-.utp__description {
-flex-basis: 50%;  
-}
-.utp__draw {
-background-image: url('../images/utp/utp-drops.png');
-background-repeat: no-repeat;
-background-position: 91% 31%; 
-}
-.utp__img {
-margin: -10px 0 0 52px;  
-}
-.utp__title {
-color:$white;
-font-family: 'Lifehack-Medium';
-font-size: 65px;
-font-weight: 500;
-letter-spacing: -1.63px;
-line-height: 60px;
-margin: 27px 0 0 10px;
+  &__list {
+  margin: 0;
+  padding: 0;
+  }
+  &__item {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+    &:after {
+    position: absolute;
+    top: 30%;
+    display: inline-block;
+    content: ' ';
+    width: rem(4px);
+    height: rem(4px);
+    border-radius: rem(2.5px);
+    background: $white;
+    }
+    &:last-child:after {
+    display: none;
+    }
+  }
+  &__link {
+  color:$white;
+  font-size: rem(13px);
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0 rem(16.4px);
+  vertical-align: super;
+  transition: .5s;
+  }
 }

@@ -1,3 +1,24 @@
+@mixin desctop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media (max-width: 992px) {
+    @content;
+  } 
+}
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;    
+  }  
+}
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;    
+  } 
+}
+
 @mixin circle($width, $color) {
   width: $width;
   height: $width;
@@ -5,7 +26,17 @@
   background-color: $color;
 }
 
+$width:100%;
+$columns: 14;
+$column_width: $width/$columns;
+ 
+  @for $i from 1 through $columns {
+    .col_#{$i} {
+      flex-basis: $i * $column_width;
+    }
+}
+
 //responsive
-@function rem($px) {
-  @return $px / 16px+0rem;
+@function rem($pixels){
+  @return $pixels / $font_size + rem;
 }

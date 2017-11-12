@@ -1,0 +1,126 @@
+.team {
+position: relative;  
+background-image: url("../images/team/team-bg.png");
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+overflow: hidden;  
+}
+.team-menu {
+position: absolute;
+top:0;
+right: 0;
+bottom: 0;
+background:rgba(69,69,69,0.9);
+padding: rem(83px) rem(80px);
+width: 49%;
+    @include tablet {
+    width: 100%;
+    text-align: center;
+    }
+    .content__title {
+    margin: rem(31px) 0 0;    
+    }
+    &__list {
+    margin: rem(78px) 0;
+    padding: 0 rem(18px);
+        @include tablet {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        margin: rem(125px) 0 0;
+        } 
+    }
+    &__item {
+        &:not(:last-child) {
+        margin: 0 0 rem(31px);
+            @include tablet {
+            margin: 0 0 rem(14px);
+            }   
+        }
+        @include tablet {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        } 
+    }
+    &__name {
+    position: relative;    
+    font-family: 'Gagalin-Regular';
+    font-size: rem(14px);
+    color: $white;
+    text-transform: uppercase;
+    margin: 0 0 rem(9px);
+    cursor: pointer;
+    transition: all .5s;
+        @include tablet {
+        font-size: rem(23px);
+        }    
+        &:before {
+        position: absolute;
+        left: rem(-19px);
+        top: rem(7px);    
+        content: "";    
+        background-image:url("../images/team/orange-arrow-down.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        width:rem(9px);
+        height: rem(6px);    
+        transition: all .3s;
+            @include tablet {
+            top: rem(14px);
+            } 
+        }
+        &--active {
+        color: $yellow;    
+        }
+        &--active + .team-menu__profile {
+        display: block;    
+        }
+        &--active:before {
+        transform: rotate(180deg);
+        transform-origin: 50% 50%;    
+        }
+    }
+    &__profile {
+    display: none;
+    overflow: hidden;
+    padding: 0 0 rem(10px);
+        @include tablet {
+        padding: 0 0 rem(15px);
+        }    
+    }
+    &__ava {
+    margin: rem(3px) rem(22px) 0 rem(-3px);
+    float: left;
+        @include tablet {
+        display: inline-block;
+        margin: 0;
+        float: none;
+        }    
+    }
+    &__img {
+    border-radius: 50%;
+    width: rem(100px);
+    height: rem(100px);
+    object-fit: cover;
+    object-position: 60% 100%;    
+    }
+    &__description {
+    color: $white;
+        @include tablet {
+        margin: rem(14px) auto 0;
+        width: 90%;
+        }
+        span {
+        font-weight: bold;
+        display: block;
+        }
+        p {
+        margin: rem(10px) 0 0;
+        line-height: rem(24px);    
+        }    
+    }
+}
