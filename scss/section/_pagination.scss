@@ -2,18 +2,21 @@
 position: fixed;
 top: 14.7%;
 right: 5.5%;
-z-index: 2000; 
+z-index: 2000;
+    @include tablet {
+    display: none;
+    }  
 }
 .pagination__item {
 position: relative;
-margin-bottom: 21px;
+margin-bottom: rem(21px);
     &:after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 6px;
-    height: 6px;
+    width: rem(6px);
+    height: rem(6px);
     background-color: $white;
     border: 1px solid $white;
     border-radius: 50%;
@@ -29,10 +32,10 @@ overflow: hidden;
     &:after {
     content: '';
     position: absolute;
-    top: -5px;
-    left: -5px;
-    width: 16px;
-    height: 16px;
+    top: rem(-5px);
+    left: rem(-5px);
+    width: rem(16px);
+    height: rem(16px);
     border-radius: 50%;
     background: transparent;
     transition: all .5s;
