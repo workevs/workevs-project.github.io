@@ -13,6 +13,9 @@ margin: rem(84px) 0;
   width: 80%;
   margin: rem(130px) auto 0;
   text-align: center;
+  }
+  @include phone {
+    margin: rem(85px) auto 0;
   }  
   &__arrow {
   position: absolute;
@@ -25,6 +28,9 @@ margin: rem(84px) 0;
   background-color: transparent;
     @include tablet {
     top: 47.3%;
+    }
+    @include phone {
+    top:37.4%;
     }
     &--left {
     left: rem(-41px);  
@@ -87,6 +93,11 @@ margin: rem(84px) 0;
     right: rem(56px);
     top: rem(-6px);
     }
+    @include phone {
+    position: absolute;
+    right: rem(-48px);
+    top: rem(-43px);
+    }
   }
   &__action {
   display: flex;
@@ -143,7 +154,11 @@ left: 0;
   @include tablet {
   left: rem(55px);
   top: rem(3px);
-  } 
+  }
+  @include phone {
+    left: rem(-48px);
+    top: rem(-34px);
+    }  
   &__menu {
   display: flex;
   flex-flow: row nowrap;  
