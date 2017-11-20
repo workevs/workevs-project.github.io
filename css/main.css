@@ -800,7 +800,8 @@ img {
 .co-logo {
   width: 6.57143rem;
   margin-right: auto;
-  margin-left: -0.21429rem; }
+  margin-left: -0.21429rem;
+  z-index: 3000; }
 
 @media (max-width: 768px) {
   .nav {
@@ -841,6 +842,7 @@ img {
 .hamburger {
   width: 1.71429rem;
   height: 1.64286rem;
+  z-index: 3000;
   -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -899,6 +901,66 @@ img {
       top: 1.14286rem;
       width: 0%;
       left: 50%; }
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background: #2f3234;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  overflow: hidden;
+  overflow-y: auto; }
+  .mobile-menu.open {
+    opacity: 1;
+    visibility: visible; }
+  .mobile-menu__list {
+    margin: 26% 0 0;
+    text-align: center; }
+  .mobile-menu__item {
+    position: relative; }
+    .mobile-menu__item:not(:last-child) {
+      margin: 0 0 3.21429rem; }
+    .mobile-menu__item:not(:last-child):after {
+      position: absolute;
+      content: ' ';
+      bottom: -75%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: inline-block;
+      width: 0.42857rem;
+      height: 0.42857rem;
+      border-radius: 0.17857rem;
+      background: #fff; }
+  .mobile-menu__link {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.71429rem;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+    .mobile-menu__link:hover, .mobile-menu__link:focus, .mobile-menu__link:active {
+      color: #f9b43b; }
 
 .benefits {
   background-image: url("../images/benefits/benefits-bg.png");
@@ -1154,17 +1216,13 @@ img {
         width: 90%;
         margin: 3.07143rem auto 0; } }
   .goods-slider__calories {
-    -webkit-flex-basis: 100%;
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%; }
+    position: absolute; }
     @media (max-width: 768px) {
       .goods-slider__calories {
-        position: absolute;
         right: 4rem;
         top: -0.42857rem; } }
     @media (max-width: 480px) {
       .goods-slider__calories {
-        position: absolute;
         right: -3.42857rem;
         top: -3.07143rem; } }
   .goods-slider__action {
@@ -1248,14 +1306,12 @@ img {
     background-position: center center;
     background-color: #f08c33;
     border-radius: 0.35714rem;
+    cursor: pointer;
     -webkit-transition: all .5s;
     -o-transition: all .5s;
     transition: all .5s; }
     .composition__button:hover {
       background-color: #e25028; }
-    .composition__button:hover + .composition__list {
-      opacity: 1;
-      visibility: visible; }
   .composition__list {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1275,6 +1331,9 @@ img {
     border-radius: 0.35714rem;
     width: 19.42857rem;
     padding: 1.07143rem 1.42857rem; }
+    .composition__list.open {
+      opacity: 1;
+      visibility: visible; }
   .composition__item {
     display: -webkit-box;
     display: -webkit-flex;
