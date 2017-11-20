@@ -31,7 +31,7 @@ overflow: hidden;
     .button {
     margin: rem(-5px) 0 0;
       @include tablet {
-      margin: 0 rem(65px) 0 0;
+      margin:0;
       }   
     }  
   }
@@ -106,7 +106,8 @@ overflow: hidden;
 .co-logo {
 width: rem(92px);
 margin-right: auto;
-margin-left: rem(-3px);  
+margin-left: rem(-3px);
+z-index: 3000;  
 }
 .nav {
   @include tablet {
@@ -144,4 +145,115 @@ margin-left: rem(-3px);
   vertical-align: super;
   transition: .5s;
   }
+}
+.hamburger {
+width: rem(24px);
+height:rem(23px);
+z-index: 3000;
+transform: rotate(0deg);
+transition: .5s ease-in-out;
+cursor: pointer;
+position: relative;
+align-self: center;
+display: none;
+margin: 0 rem(8px) 0 rem(30px);
+  @include tablet {
+  display: flex;
+  }
+  span {
+  display: block;
+  position: absolute;
+  height: rem(4px);
+  width: 100%;
+  background:$white;
+  border-radius: rem(3px);
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.3s ease-in-out;
+    &:nth-child(1) {
+    top: 0;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+    top: rem(9px);
+    }
+    &:nth-child(4) {
+    top: rem(18px);
+    }
+  }
+  &.open span {
+  background: $white;
+    &:nth-child(1) {
+    top: rem(16px);
+    width: 0%;
+    left: 50%;
+    }
+    &:nth-child(2) {
+    transform: rotate(45deg);
+    }
+    &:nth-child(3) {
+    transform: rotate(-45deg);
+    }
+    &:nth-child(4) {
+    top: rem(16px);
+    width: 0%;
+    left: 50%;
+    }
+  }
+}
+.mobile-menu {
+position: absolute;
+top: 0;
+left: 0;
+bottom: 0;
+width: 100%; 
+height: 100vh;
+background:#2f3234;
+display: flex;
+flex-flow: row nowrap;
+justify-content: center;
+opacity: 0;
+visibility: hidden;
+transition: all .3s;
+overflow: hidden;
+overflow-y: auto;
+  &.open {
+  opacity: 1;
+  visibility: visible; 
+  }
+  &__list {
+    margin: 26% 0 0;
+    text-align: center;
+  }
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin: 0 0 rem(45px);  
+    }  
+    &:not(:last-child):after {
+      position: absolute;
+      content: ' ';
+      bottom: -75%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      display: inline-block;
+      width: rem(6px);
+      height: rem(6px);
+      border-radius: rem(2.5px);
+      background: $white;
+    }
+  }
+  &__link {
+  color: $white;
+  text-transform:uppercase;
+  font-size: rem(24px);
+  transition: all .5s;
+    &:hover,
+    &:focus,
+    &:active {
+    color: $yellow;  
+    }   
+  } 
 }

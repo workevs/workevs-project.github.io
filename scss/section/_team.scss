@@ -18,8 +18,15 @@ width: 49%;
     width: 100%;
     text-align: center;
     }
+    @include phone {
+    padding: rem(52px) 0;
+    }
     .content__title {
-    margin: rem(31px) 0 0;    
+    margin: rem(31px) 0 0;
+        @include phone {
+            margin: 0;
+            font-size: rem(50px);
+        }    
     }
     &__list {
     margin: rem(78px) 0;
@@ -30,6 +37,9 @@ width: 49%;
         justify-content: center;
         align-items: center;
         margin: rem(125px) 0 0;
+        }
+        @include phone {
+            margin: rem(82px) 0 0;
         } 
     }
     &__item {

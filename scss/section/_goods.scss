@@ -13,6 +13,9 @@ margin: rem(84px) 0;
   width: 80%;
   margin: rem(130px) auto 0;
   text-align: center;
+  }
+  @include phone {
+    margin: rem(85px) auto 0;
   }  
   &__arrow {
   position: absolute;
@@ -25,6 +28,9 @@ margin: rem(84px) 0;
   background-color: transparent;
     @include tablet {
     top: 47.3%;
+    }
+    @include phone {
+    top:37.4%;
     }
     &--left {
     left: rem(-41px);  
@@ -81,11 +87,14 @@ margin: rem(84px) 0;
     }  
   }
   &__calories {
-  flex-basis:100%;
+  position: absolute;
     @include tablet {
-    position: absolute;
     right: rem(56px);
     top: rem(-6px);
+    }
+    @include phone {
+    right: rem(-48px);
+    top: rem(-43px);
     }
   }
   &__action {
@@ -143,7 +152,11 @@ left: 0;
   @include tablet {
   left: rem(55px);
   top: rem(3px);
-  } 
+  }
+  @include phone {
+    left: rem(-48px);
+    top: rem(-34px);
+    }  
   &__menu {
   display: flex;
   flex-flow: row nowrap;  
@@ -156,13 +169,10 @@ left: 0;
   background-position: center center;
   background-color:#f08c33;
   border-radius: rem(5px);
+  cursor: pointer;
   transition: all .5s;
     &:hover {
     background-color:$orange;
-    }
-    &:hover + .composition__list {
-    opacity: 1;
-    visibility: visible;  
     }
   }
   &__list {  
@@ -175,6 +185,10 @@ left: 0;
   border-radius: rem(5px);
   width: rem(272px);
   padding: rem(15px) rem(20px);
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
   }
   &__item {
   display: flex;
