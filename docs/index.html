@@ -33,7 +33,7 @@
                             <div class="button">
                                 <a href="#" class="button__link">Заказать</a>
                             </div>
-                            <div class="hamburger">
+                            <div id="hamburger" class="hamburger">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -119,7 +119,15 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <img src="images/goods/good.png">
+                                        <div class="goods-slider__img">
+                                            <img src="images/goods/good.png">
+                                        </div>
+                                        <div class="goods-slider__calories">
+                                            <div class="calories">
+                                                <div>1200</div>
+                                                <span>ккал</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="goods-slider__description">
                                         <div class="content__title content__title--white">Dark beef burger</div>
@@ -132,12 +140,6 @@
                                             <div class="button">
                                                 <a href="#" class="button__link">Заказать</a>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="goods-slider__calories">
-                                        <div class="calories">
-                                            <div>1200</div>
-                                            <span>ккал</span>
                                         </div>
                                     </div>
                                 </div>
@@ -468,7 +470,7 @@
                     </footer>
                 </section>
 
-                <section class="pagination">
+                <div class="pagination">
                     <ul class="pagination__list">
                         <li class="pagination__item">
                             <a href="#" class="pagination__link pagination__link--active"></a>
@@ -495,9 +497,30 @@
                             <a href="#" class="pagination__link"></a>
                         </li>
                     </ul>
-                </section>
+                </div>
 
-                
+                <div id="mobile-menu" class="mobile-menu">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Почему мы</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Меню</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Советы</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Кто мы</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Свяжитесь с нами</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
 
@@ -508,4 +531,3 @@
 
     </body>
 </html>
-
