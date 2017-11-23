@@ -5,6 +5,9 @@ background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
 overflow: hidden;
+display: flex;
+flex-direction: column;
+justify-content: flex-start; 
   &:after {
   position: absolute;
   content: "";
@@ -39,9 +42,16 @@ overflow: hidden;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+    @include laptop {
+      flex-flow: column wrap;
+      text-align: center;
+    }
+    @include phone {
+      padding: rem(35px) 0 0;
+    }
     .content__title {
     margin: rem(138px) 0 0 rem(10px);
-      @include tablet {
+      @include laptop {
       margin: rem(37px) 0 0;
       text-align: center;
       }
@@ -62,7 +72,7 @@ overflow: hidden;
     margin: 0 auto;
     }
   }
-  &__draw {
+  /*&__draw {
   background-image: url('../images/utp/utp-drops.png');
   background-repeat: no-repeat;
   background-position: 91% 34%;
@@ -73,16 +83,14 @@ overflow: hidden;
     background-image: url('../images/utp/480/utp-drops.png');
     background-position: 50% 50%;
     }  
-  }
+  }*/
   &__img {
-  margin: rem(-6px) 0 0 rem(51px);
-    @include tablet {
-    margin: rem(65px) auto 0;
+    @include laptop {
+    margin: 0 auto;
     }
     @include phone {
-    margin: rem(40px) auto 0;
-    width: 70%;
-    }    
+    width: 80%;
+    }     
   }
   &__title {
   color:$white;
@@ -92,8 +100,7 @@ overflow: hidden;
   letter-spacing: rem(-1.63px);
   line-height: rem(60px);
   margin: rem(29px) 0 0 rem(10px);
-    @include tablet {
-    text-align: center;
+    @include laptop {
     width: 80%;
     margin: rem(28px) auto 0;
     }
@@ -183,7 +190,7 @@ margin: 0 rem(8px) 0 rem(30px);
     }
   }
   &.open span {
-  background: $white;
+  background: darken($white, 30%);
     &:nth-child(1) {
     top: rem(16px);
     width: 0%;
@@ -203,7 +210,7 @@ margin: 0 rem(8px) 0 rem(30px);
   }
 }
 .mobile-menu {
-position: absolute;
+position: fixed;
 top: 0;
 left: 0;
 bottom: 0;
