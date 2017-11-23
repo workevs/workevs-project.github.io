@@ -10,43 +10,49 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="stylesheet" href="css/main.css">
     </head>
-    <body>
+    <body class="body">
 
         <div class="wrapper">
            
             <div class="content">
 
                 <section class="utp content__item">
-                    <div class="container">
-                        <div class="utp__header">
-                            <div class="co-logo"><a href="/" class="co-logo__link"><img src="images/logo.svg" class="co-lo__img"></a></div>
-                            <nav class="nav">
-                                <ul class="nav__list">
-                                    <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                                    <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
-                                </ul>
-                            </nav>
-                            <div class="button">
-                                <a href="#" class="button__link">Заказать</a>
-                            </div>
-                            <div class="hamburger">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                    <div class="utp__top">
+                        <div class="container">
+                            <div class="utp__header">
+                                <div class="co-logo"><a href="/" class="co-logo__link"><img src="images/logo.svg" class="co-lo__img"></a></div>
+                                <nav class="nav">
+                                    <ul class="nav__list">
+                                        <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
+                                        <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
+                                        <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
+                                        <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
+                                        <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
+                                        <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                                    </ul>
+                                </nav>
+                                <div class="button">
+                                    <a href="#" class="button__link">Заказать</a>
+                                </div>
+                                <div id="hamburger" class="hamburger">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
                             </div>
                         </div>
-                        <div class="utp__content">
-                            <div class="utp__draw">
-                                <img src="images/utp/utp-burger.png" alt="" class="utp__img">
-                            </div>
-                            <div class="utp__description">
-                                <div class="content__title content__title--yellow">Мы делаем</div>
-                                <div class="utp__title">натуральные бургеры</div>
+                    </div>
+                    <div class="utp__bottom">
+                        <div class="container">
+                            <div class="utp__content">
+                                <div class="utp__draw">
+                                    <img src="images/utp/utp-burger.png" alt="" class="utp__img">
+                                </div>
+                                <div class="utp__description">
+                                    <div class="content__title content__title--yellow">Мы делаем</div>
+                                    <div class="utp__title">натуральные бургеры</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -119,7 +125,15 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <img src="images/goods/good.png">
+                                        <div class="goods-slider__img">
+                                            <img src="images/goods/good.png">
+                                        </div>
+                                        <div class="goods-slider__calories">
+                                            <div class="calories">
+                                                <div>1200</div>
+                                                <span>ккал</span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="goods-slider__description">
                                         <div class="content__title content__title--white">Dark beef burger</div>
@@ -132,12 +146,6 @@
                                             <div class="button">
                                                 <a href="#" class="button__link">Заказать</a>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="goods-slider__calories">
-                                        <div class="calories">
-                                            <div>1200</div>
-                                            <span>ккал</span>
                                         </div>
                                     </div>
                                 </div>
@@ -468,7 +476,7 @@
                     </footer>
                 </section>
 
-                <section class="pagination">
+                <div class="pagination">
                     <ul class="pagination__list">
                         <li class="pagination__item">
                             <a href="#" class="pagination__link pagination__link--active"></a>
@@ -495,9 +503,30 @@
                             <a href="#" class="pagination__link"></a>
                         </li>
                     </ul>
-                </section>
+                </div>
 
-                
+                <div id="mobile-menu" class="mobile-menu">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Почему мы</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Меню</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Советы</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Кто мы</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Свяжитесь с нами</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
 
             </div>
 
@@ -508,4 +537,3 @@
 
     </body>
 </html>
-

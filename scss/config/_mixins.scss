@@ -26,17 +26,8 @@
   background-color: $color;
 }
 
-$width:100%;
-$columns: 14;
-$column_width: $width/$columns;
- 
-  @for $i from 1 through $columns {
-    .col_#{$i} {
-      flex-basis: $i * $column_width;
-    }
-}
-
 //responsive
+
 @function rem($pixels){
   @return $pixels / $font_size + rem;
 }
