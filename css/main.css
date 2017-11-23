@@ -416,10 +416,9 @@ body {
   color: #2f3234;
   background: #2f3234;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*&.open {
-  position: fixed;  
-  }*/ }
+  -moz-osx-font-smoothing: grayscale; }
+  body.open {
+    position: fixed; }
 
 *,
 *::before,
