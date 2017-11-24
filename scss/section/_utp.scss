@@ -72,18 +72,6 @@ justify-content: flex-start;
     margin: 0 auto;
     }
   }
-  /*&__draw {
-  background-image: url('../images/utp/utp-drops.png');
-  background-repeat: no-repeat;
-  background-position: 91% 34%;
-    @include tablet {
-    background-position: 50% 55%;
-    }
-    @include phone {
-    background-image: url('../images/utp/480/utp-drops.png');
-    background-position: 50% 50%;
-    }  
-  }*/
   &__img {
     @include laptop {
     margin: 0 auto;
