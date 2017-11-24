@@ -60,6 +60,8 @@ margin: rem(84px) 0;
     @include tablet {
     flex-basis:100%;
     }
+  }
+  &__img {
     img {
       @include tablet {
       margin: 0 auto;
