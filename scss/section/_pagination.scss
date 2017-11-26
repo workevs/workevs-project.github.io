@@ -10,6 +10,7 @@ z-index: 2000;
 .pagination__item {
 position: relative;
 margin-bottom: rem(21px);
+cursor: pointer;
     &:after {
     content: '';
     position: absolute;
@@ -18,12 +19,15 @@ margin-bottom: rem(21px);
     width: rem(6px);
     height: rem(6px);
     background-color: $white;
-    border: 1px solid $white;
+    border: 2px solid $white;
     border-radius: 50%;
-    transition: all .5s;
+    transition: all .3s, ease-in .3s;
     }
     &:hover .pagination__link:after {
-    border: 1px solid $white;    
+    border: 2px solid $white;    
+    }
+    &--active .pagination__link:after {
+    border: 2px solid $white;  
     }    
 }
 .pagination__link {
@@ -32,15 +36,13 @@ overflow: hidden;
     &:after {
     content: '';
     position: absolute;
+    z-index: 5;
     top: rem(-5px);
     left: rem(-5px);
     width: rem(16px);
     height: rem(16px);
     border-radius: 50%;
     background: transparent;
-    transition: all .5s;
-    }
-    &--active:after {
-    border: 1px solid $white;    
-    }    
+    transition: all .3s, ease-in .3s;
+    }   
 }

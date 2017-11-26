@@ -40,6 +40,15 @@ height: 100%;
     &--diet {
     background-image: url("../images/menu/diet.png");
     }
+    &--active {
+      .accordeon-menu__description {
+        p {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 1s;
+        } 
+      }
+    }
   }
   &__title {
   width: rem(80px);
@@ -48,6 +57,11 @@ height: 100%;
   float: left;
   position: relative;
   background:rgba(69,69,69,0.8);
+  cursor: pointer;
+  transition: all .5s;
+    &:hover div {
+    color: $yellow;  
+    }
     div {
     color: $white;
     font-size: rem(35px);
@@ -59,6 +73,7 @@ height: 100%;
     transform-origin: 0 0;
     left: 50%;
     top: 70%;
+    transition: all .5s;
       @include tablet {
       font-size: rem(40.7px);
       top: 96%;
@@ -72,15 +87,12 @@ height: 100%;
   background:rgba(69,69,69,0.8);
   width: 0;
   overflow: hidden;
-  transition: all .4s ease-out .1s;
-    &.open {
-    width: rem(540px);
-      @include tablet {
-      width: rem(300px);
-      } 
-    }
+  transition: 1s;
     p {
     margin: rem(30px) rem(20px) rem(30px) 0;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: .1s;
     }   
   }  
 }

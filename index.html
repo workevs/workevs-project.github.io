@@ -16,23 +16,23 @@
            
             <div class="content">
 
-                <section class="utp content__item">
+                <section class="utp content__item content__item--active">
                     <div class="utp__top">
                         <div class="container">
                             <div class="utp__header">
                                 <div class="co-logo"><a href="/" class="co-logo__link"><img src="images/logo.svg" class="co-lo__img"></a></div>
                                 <nav class="nav">
                                     <ul class="nav__list">
-                                        <li class="nav__item"><a href="#" class="nav__link">О нас</a></li>
-                                        <li class="nav__item"><a href="#" class="nav__link">Бургеры</a></li>
-                                        <li class="nav__item"><a href="#" class="nav__link">Команда</a></li>
-                                        <li class="nav__item"><a href="#" class="nav__link">Меню</a></li>
-                                        <li class="nav__item"><a href="#" class="nav__link">Отзывы</a></li>
-                                        <li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+                                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="1">О нас</a></li>
+                                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="2">Бургеры</a></li>
+                                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="3">Команда</a></li>
+                                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="4">Меню</a></li>
+                                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="5">Отзывы</a></li>
+                                        <li class="nav__item"><a href="" class="nav__link" data-scroll-to="7">Контакты</a></li>
                                     </ul>
                                 </nav>
                                 <div class="button">
-                                    <a href="#" class="button__link">Заказать</a>
+                                    <a href="" class="button__link" data-scroll-to="6">Заказать</a>
                                 </div>
                                 <div id="hamburger" class="hamburger">
                                     <span></span>
@@ -84,73 +84,327 @@
                 <section class="goods content__item">
                     <div class="container">
                         <div class="goods-slider">
-                            <button class="goods-slider__arrow goods-slider__arrow--left"></button>
-                            <div class="goods-slider__list">
-                                <div class="goods-slider__item">
-                                    <div class="goods-slider__draw">
-                                        <div class="composition">
-                                            <div class="composition__menu">
-                                                <div class="composition__button"></div>
-                                                <ul class="composition__list">
-                                                    <li class="composition__item">
-                                                        <img class="composition__icon" src="images/goods/composition-icon-1.png">
-                                                        <div class="composition__unit">Говядина</div>
-                                                        <div class="composition__weight">300 г</div>
-                                                    </li>
-                                                    <li class="composition__item">
-                                                        <img class="composition__icon" src="images/goods/composition-icon-2.png">
-                                                        <div class="composition__unit">Булочки</div>
-                                                        <div class="composition__weight">100 г</div>
-                                                    </li>
-                                                    <li class="composition__item">
-                                                        <img class="composition__icon" src="images/goods/composition-icon-3.png">
-                                                        <div class="composition__unit">Зелень</div>
-                                                        <div class="composition__weight">70 г</div>
-                                                    </li>
-                                                    <li class="composition__item">
-                                                        <img class="composition__icon" src="images/goods/composition-icon-4.png">
-                                                        <div class="composition__unit">Соус</div>
-                                                        <div class="composition__weight">150 г</div>
-                                                    </li>
-                                                    <li class="composition__item">
-                                                        <img class="composition__icon" src="images/goods/composition-icon-5.png">
-                                                        <div class="composition__unit">Овощи</div>
-                                                        <div class="composition__weight">200 г</div>
-                                                    </li>
-                                                    <li class="composition__item">
-                                                        <img class="composition__icon" src="images/goods/composition-icon-6.png">
-                                                        <div class="composition__unit">Сыр</div>
-                                                        <div class="composition__weight">80 г</div>
-                                                    </li>
-                                                </ul>
+                            <button class="goods-slider__arrow goods-slider__arrow--prev"></button>
+                            <div class="goods-slider__images">
+                                <ul class="goods-slider__list">
+                                    <li class="goods-slider__item goods-slider__item--active">
+                                        <div class="goods-slider__wrapper">
+                                            <div class="goods-slider__draw">
+                                                <div class="composition">
+                                                    <div class="composition__menu">
+                                                        <div class="composition__button"></div>
+                                                        <ul class="composition__list">
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-1.png">
+                                                                <div class="composition__unit">Говядина</div>
+                                                                <div class="composition__weight">300 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-2.png">
+                                                                <div class="composition__unit">Булочки</div>
+                                                                <div class="composition__weight">100 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-3.png">
+                                                                <div class="composition__unit">Зелень</div>
+                                                                <div class="composition__weight">70 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-4.png">
+                                                                <div class="composition__unit">Соус</div>
+                                                                <div class="composition__weight">150 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-5.png">
+                                                                <div class="composition__unit">Овощи</div>
+                                                                <div class="composition__weight">200 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-6.png">
+                                                                <div class="composition__unit">Сыр</div>
+                                                                <div class="composition__weight">80 г</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <img src="images/goods/good-1.png" class="goods-slider__img">
+                                                <div class="goods-slider__calories">
+                                                    <div class="calories">
+                                                        <div>1200</div>
+                                                        <span>ккал</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-slider__description">
+                                                <div class="content__title content__title--white">Dark beef burger</div>
+                                                <p>Ваш старый добрый знакомый, с рубленым бифшстексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                                <div class="goods-slider__action">
+                                                    <div class="goods-slider__cost">
+                                                        <span>500</span>
+                                                        рублей
+                                                    </div>
+                                                    <div class="button">
+                                                        <a href="" class="button__link" data-scroll-to="7">Заказать</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="goods-slider__img">
-                                            <img src="images/goods/good.png">
-                                        </div>
-                                        <div class="goods-slider__calories">
-                                            <div class="calories">
-                                                <div>1200</div>
-                                                <span>ккал</span>
+                                    </li>
+                                    <li class="goods-slider__item">
+                                        <div class="goods-slider__wrapper">
+                                            <div class="goods-slider__draw">
+                                                <div class="composition">
+                                                    <div class="composition__menu">
+                                                        <div class="composition__button"></div>
+                                                        <ul class="composition__list">
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-1.png">
+                                                                <div class="composition__unit">Говядина</div>
+                                                                <div class="composition__weight">300 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-2.png">
+                                                                <div class="composition__unit">Булочки</div>
+                                                                <div class="composition__weight">100 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-3.png">
+                                                                <div class="composition__unit">Зелень</div>
+                                                                <div class="composition__weight">70 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-4.png">
+                                                                <div class="composition__unit">Соус</div>
+                                                                <div class="composition__weight">150 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-5.png">
+                                                                <div class="composition__unit">Овощи</div>
+                                                                <div class="composition__weight">200 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-6.png">
+                                                                <div class="composition__unit">Сыр</div>
+                                                                <div class="composition__weight">80 г</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <img src="images/goods/good-2.png" class="goods-slider__img">
+                                                <div class="goods-slider__calories">
+                                                    <div class="calories">
+                                                        <div>1200</div>
+                                                        <span>ккал</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-slider__description">
+                                                <div class="content__title content__title--white">Burger Sandwich</div>
+                                                <p>Ваш старый добрый знакомый, с рубленым бифшстексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                                <div class="goods-slider__action">
+                                                    <div class="goods-slider__cost">
+                                                        <span>500</span>
+                                                        рублей
+                                                    </div>
+                                                    <div class="button">
+                                                        <a href="" class="button__link" data-scroll-to="6">Заказать</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="goods-slider__description">
-                                        <div class="content__title content__title--white">Dark beef burger</div>
-                                        <p>Ваш старый добрый знакомый, с рубленым бифшстексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
-                                        <div class="goods-slider__action">
-                                            <div class="goods-slider__cost">
-                                                <span>500</span>
-                                                рублей
+                                    </li>
+                                    <li class="goods-slider__item">
+                                        <div class="goods-slider__wrapper">
+                                            <div class="goods-slider__draw">
+                                                <div class="composition">
+                                                    <div class="composition__menu">
+                                                        <div class="composition__button"></div>
+                                                        <ul class="composition__list">
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-1.png">
+                                                                <div class="composition__unit">Говядина</div>
+                                                                <div class="composition__weight">300 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-2.png">
+                                                                <div class="composition__unit">Булочки</div>
+                                                                <div class="composition__weight">100 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-3.png">
+                                                                <div class="composition__unit">Зелень</div>
+                                                                <div class="composition__weight">70 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-4.png">
+                                                                <div class="composition__unit">Соус</div>
+                                                                <div class="composition__weight">150 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-5.png">
+                                                                <div class="composition__unit">Овощи</div>
+                                                                <div class="composition__weight">200 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-6.png">
+                                                                <div class="composition__unit">Сыр</div>
+                                                                <div class="composition__weight">80 г</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <img src="images/goods/good-3.png" class="goods-slider__img">
+                                                <div class="goods-slider__calories">
+                                                    <div class="calories">
+                                                        <div>1200</div>
+                                                        <span>ккал</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="button">
-                                                <a href="#" class="button__link">Заказать</a>
+                                            <div class="goods-slider__description">
+                                                <div class="content__title content__title--white">Chiken Burger</div>
+                                                <p>Ваш старый добрый знакомый, с рубленым бифшстексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                                <div class="goods-slider__action">
+                                                    <div class="goods-slider__cost">
+                                                        <span>500</span>
+                                                        рублей
+                                                    </div>
+                                                    <div class="button">
+                                                        <a href="" class="button__link" data-scroll-to="6">Заказать</a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li class="goods-slider__item">
+                                        <div class="goods-slider__wrapper">
+                                            <div class="goods-slider__draw">
+                                                <div class="composition">
+                                                    <div class="composition__menu">
+                                                        <div class="composition__button"></div>
+                                                        <ul class="composition__list">
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-1.png">
+                                                                <div class="composition__unit">Говядина</div>
+                                                                <div class="composition__weight">300 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-2.png">
+                                                                <div class="composition__unit">Булочки</div>
+                                                                <div class="composition__weight">100 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-3.png">
+                                                                <div class="composition__unit">Зелень</div>
+                                                                <div class="composition__weight">70 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-4.png">
+                                                                <div class="composition__unit">Соус</div>
+                                                                <div class="composition__weight">150 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-5.png">
+                                                                <div class="composition__unit">Овощи</div>
+                                                                <div class="composition__weight">200 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-6.png">
+                                                                <div class="composition__unit">Сыр</div>
+                                                                <div class="composition__weight">80 г</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <img src="images/goods/good-4.png" class="goods-slider__img">
+                                                <div class="goods-slider__calories">
+                                                    <div class="calories">
+                                                        <div>1200</div>
+                                                        <span>ккал</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-slider__description">
+                                                <div class="content__title content__title--white">NYC Diner Bacon Cheeseburger</div>
+                                                <p>Ваш старый добрый знакомый, с рубленым бифшстексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                                <div class="goods-slider__action">
+                                                    <div class="goods-slider__cost">
+                                                        <span>500</span>
+                                                        рублей
+                                                    </div>
+                                                    <div class="button">
+                                                        <a href="" class="button__link" data-scroll-to="6">Заказать</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods-slider__item">
+                                        <div class="goods-slider__wrapper">
+                                            <div class="goods-slider__draw">
+                                                <div class="composition">
+                                                    <div class="composition__menu">
+                                                        <div class="composition__button"></div>
+                                                        <ul class="composition__list">
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-1.png">
+                                                                <div class="composition__unit">Говядина</div>
+                                                                <div class="composition__weight">300 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-2.png">
+                                                                <div class="composition__unit">Булочки</div>
+                                                                <div class="composition__weight">100 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-3.png">
+                                                                <div class="composition__unit">Зелень</div>
+                                                                <div class="composition__weight">70 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-4.png">
+                                                                <div class="composition__unit">Соус</div>
+                                                                <div class="composition__weight">150 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-5.png">
+                                                                <div class="composition__unit">Овощи</div>
+                                                                <div class="composition__weight">200 г</div>
+                                                            </li>
+                                                            <li class="composition__item">
+                                                                <img class="composition__icon" src="images/goods/composition-icon-6.png">
+                                                                <div class="composition__unit">Сыр</div>
+                                                                <div class="composition__weight">80 г</div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <img src="images/goods/good-5.png" class="goods-slider__img">
+                                                <div class="goods-slider__calories">
+                                                    <div class="calories">
+                                                        <div>1200</div>
+                                                        <span>ккал</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="goods-slider__description">
+                                                <div class="content__title content__title--white">Spicy Shrimp Burger</div>
+                                                <p>Ваш старый добрый знакомый, с рубленым бифшстексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</p>
+                                                <div class="goods-slider__action">
+                                                    <div class="goods-slider__cost">
+                                                        <span>500</span>
+                                                        рублей
+                                                    </div>
+                                                    <div class="button">
+                                                        <a href="" class="button__link" data-scroll-to="6">Заказать</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            <button class="goods-slider__arrow goods-slider__arrow--right"></button>
+                            <button class="goods-slider__arrow goods-slider__arrow--next"></button>
                         </div>
                     </div>
                 </section>
@@ -216,33 +470,27 @@
                     <div class="accordeon-menu">
                         <ul class="accordeon-menu__list">
                             <li class="accordeon-menu__item accordeon-menu__item--meet">
-                                <a href="#" class="accordeon-menu__link">
-                                    <div class="accordeon-menu__title">
-                                        <div>Для мясоедов</div>
-                                    </div>
-                                </a>
+                                <div class="accordeon-menu__title">
+                                    <div>Для мясоедов</div>
+                                </div>
                                 <div class="accordeon-menu__description">
                                     <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
                                     Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
                                 </div>
                             </li>
                             <li class="accordeon-menu__item accordeon-menu__item--vegan">
-                                <a href="#" class="accordeon-menu__link">
-                                    <div class="accordeon-menu__title">
-                                        <div>Вегетарианское</div>
-                                    </div>
-                                </a>
+                                <div class="accordeon-menu__title">
+                                    <div>Вегетарианское</div>
+                                </div>
                                 <div class="accordeon-menu__description">
                                     <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
                                     Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
                                 </div>
                             </li>
                             <li class="accordeon-menu__item accordeon-menu__item--diet">
-                                <a href="#" class="accordeon-menu__link">
-                                    <div class="accordeon-menu__title">
-                                        <div>Диетическое</div>
-                                    </div>
-                                </a>
+                                <div class="accordeon-menu__title">
+                                    <div>Диетическое</div>
+                                </div>
                                 <div class="accordeon-menu__description">
                                     <p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр.
                                     Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.</p>
@@ -255,103 +503,116 @@
                 <section class="reviews content__item">
                     <ul class="reviews__list">
                         <li class="reviews__item">
-                            <div class="visible">
+                            <div class="reviews__visible">
                                 <img src="images/reviews/reviews-author-ava-1.png">
                             </div>
-                            <div class="mask">
-                                <span>Константин Спилберг</span>
-                                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                            <div class="reviews__mask">
+                                <span class="reviews__name">Константин Спилберг</span>
+                                <p class="reviews__value">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                                 <div class="button">
-                                    <a href="#" class="button__link">Подробнее</a>
+                                    <a href="" class="button__link reviews__link">Подробнее</a>
                                 </div>
                             </div>
                         </li>
                         <li class="reviews__item">
-                            <div class="visible">
+                            <div class="reviews__visible">
                                 <img src="images/reviews/reviews-author-ava-2.png">
                             </div>
-                            <div class="mask">
-                                <span>Константин Спилберг</span>
-                                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                            <div class="reviews__mask">
+                                <span class="reviews__name">Константин Спилберг</span>
+                                <p class="reviews__value">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                                 <div class="button">
-                                    <a href="#" class="button__link">Подробнее</a>
+                                    <a href="" class="button__link reviews__link">Подробнее</a>
                                 </div>
                             </div>
                         </li>
                         <li class="reviews__item">
-                            <div class="visible">
+                            <div class="reviews__visible">
                                 <img src="images/reviews/reviews-author-ava-3.png">
                             </div>
-                            <div class="mask">
-                                <span>Константин Спилберг</span>
-                                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                            <div class="reviews__mask">
+                                <span class="reviews__name">Константин Спилберг</span>
+                                <p class="reviews__value">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                                 <div class="button">
-                                    <a href="#" class="button__link">Подробнее</a>
+                                    <a href="" class="button__link reviews__link">Подробнее</a>
                                 </div>
                             </div>
                         </li>
                         <li class="reviews__item">
-                            <div class="visible">
+                            <div class="reviews__visible">
                                 <img src="images/reviews/reviews-author-ava-4.png">
                             </div>
-                            <div class="mask">
-                                <span>Константин Спилберг</span>
-                                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                            <div class="reviews__mask">
+                                <span class="reviews__name">Константин Спилберг</span>
+                                <p class="reviews__value">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                                 <div class="button">
-                                    <a href="#" class="button__link">Подробнее</a>
+                                    <a href="" class="button__link reviews__link">Подробнее</a>
                                 </div>
                             </div>
                         </li>
                         <li class="reviews__item">
-                            <div class="visible">
+                            <div class="reviews__visible">
                                 <img src="images/reviews/reviews-author-ava-5.png">
                             </div>
-                            <div class="mask">
-                                <span>Константин Спилберг</span>
-                                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                            <div class="reviews__mask">
+                                <span class="reviews__name">Константин Спилберг</span>
+                                <p class="reviews__value">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                                 <div class="button">
-                                    <a href="#" class="button__link">Подробнее</a>
+                                    <a href="" class="button__link reviews__link">Подробнее</a>
                                 </div>
                             </div>
                         </li>
                         <li class="reviews__item">
-                            <div class="visible">
+                            <div class="reviews__visible">
                                 <img src="images/reviews/reviews-author-ava-6.png">
                             </div>
-                            <div class="mask">
-                                <span>Константин Спилберг</span>
-                                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                            <div class="reviews__mask">
+                                <span class="reviews__name">Константин Спилберг</span>
+                                <p class="reviews__value">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                                 <div class="button">
-                                    <a href="#" class="button__link">Подробнее</a>
+                                    <a href="" class="button__link reviews__link">Подробнее</a>
                                 </div>
                             </div>
                         </li>
                         <li class="reviews__item">
-                            <div class="visible">
+                            <div class="reviews__visible">
                                 <img src="images/reviews/reviews-author-ava-7.png">
                             </div>
-                            <div class="mask">
-                                <span>Константин Спилберг</span>
-                                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                            <div class="reviews__mask">
+                                <span class="reviews__name">Константин Спилберг</span>
+                                <p class="reviews__value">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                                 <div class="button">
-                                    <a href="#" class="button__link">Подробнее</a>
+                                    <a href="" class="button__link reviews__link">Подробнее</a>
                                 </div>
                             </div>
                         </li>
                         <li class="reviews__item">
-                            <div class="visible">
+                            <div class="reviews__visible">
                                 <img src="images/reviews/reviews-author-ava-8.png">
                             </div>
-                            <div class="mask">
-                                <span>Константин Спилберг</span>
-                                <p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+                            <div class="reviews__mask">
+                                <span class="reviews__name">Константин Спилберг</span>
+                                <p class="reviews__value">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
                                 <div class="button">
-                                    <a href="#" class="button__link">Подробнее</a>
+                                    <a href="" class="button__link reviews__link">Подробнее</a>
                                 </div>
                             </div>
                         </li>
- 
                     </ul>
+                    <div class="modal-review visuallyhidden">
+                        <div class="modal-review__container">
+                            <div class="modal-review__wrapper">
+                                <div class="modal-review__close">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="modal-review__name"></div>
+                                <div class="modal-review__value"></div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section class="order content__item">
@@ -476,64 +737,70 @@
                     </footer>
                 </section>
 
-                <div class="pagination">
-                    <ul class="pagination__list">
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link pagination__link--active"></a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link"></a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link"></a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link"></a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link"></a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link"></a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link"></a>
-                        </li>
-                        <li class="pagination__item">
-                            <a href="#" class="pagination__link"></a>
-                        </li>
-                    </ul>
-                </div>
+            </div>
 
-                <div id="mobile-menu" class="mobile-menu">
-                    <ul class="mobile-menu__list">
-                        <li class="mobile-menu__item">
-                            <a href="#" class="mobile-menu__link">Почему мы</a>
-                        </li>
-                        <li class="mobile-menu__item">
-                            <a href="#" class="mobile-menu__link">Меню</a>
-                        </li>
-                        <li class="mobile-menu__item">
-                            <a href="#" class="mobile-menu__link">Советы</a>
-                        </li>
-                        <li class="mobile-menu__item">
-                            <a href="#" class="mobile-menu__link">Кто мы</a>
-                        </li>
-                        <li class="mobile-menu__item">
-                            <a href="#" class="mobile-menu__link">Свяжитесь с нами</a>
-                        </li>
-                        <li class="mobile-menu__item">
-                            <a href="#" class="mobile-menu__link">Контакты</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="pagination">
+                <ul class="pagination__list">
+                    <li class="pagination__item pagination__item--active">
+                        <a href="" class="pagination__link" data-scroll-to="0"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="" class="pagination__link" data-scroll-to="1"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="" class="pagination__link" data-scroll-to="2"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="" class="pagination__link" data-scroll-to="3"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="" class="pagination__link" data-scroll-to="4"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="" class="pagination__link" data-scroll-to="5"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="" class="pagination__link" data-scroll-to="6"></a>
+                    </li>
+                    <li class="pagination__item">
+                        <a href="" class="pagination__link" data-scroll-to="7"></a>
+                    </li>
+                </ul>
+            </div>
 
+            <div id="mobile-menu" class="mobile-menu">
+                <ul class="mobile-menu__list">
+                    <li class="mobile-menu__item">
+                        <a href="" class="mobile-menu__link" data-scroll-to="1">Почему мы</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="" class="mobile-menu__link" data-scroll-to="4">Меню</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="" class="mobile-menu__link" data-scroll-to="5">Советы</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="" class="mobile-menu__link" data-scroll-to="3">Кто мы</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="" class="mobile-menu__link" data-scroll-to="6">Свяжитесь с нами</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a href="" class="mobile-menu__link" data-scroll-to="7">Контакты</a>
+                    </li>
+                </ul>
             </div>
 
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.7/mobile-detect.min.js"></script>
+        <script src="js/jquery.touchSwipe.min.js"></script>
         <script src="js/scripts.js"></script>
+        <!--<script src="js/jquery.fullpage.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/plugin.js"></script>-->
 
     </body>
 </html>
