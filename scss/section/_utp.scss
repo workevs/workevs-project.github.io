@@ -63,12 +63,12 @@ justify-content: flex-start;
   }
   &__draw,
   &__description {
-  flex-basis: 50%;
-    @include tablet {
-    flex-basis: 100%;
+  width: 50%;
+    @include tablet { 
+    width: 100%;
     }
     @include phone {
-    flex-basis: 90%;
+    width: 90%;
     margin: 0 auto;
     }
   }
@@ -218,6 +218,7 @@ visibility: hidden;
 transition: all .3s;
 overflow: hidden;
 overflow-y: auto;
+z-index: 1000;
   &.mobile-menu-open {
   opacity: 1;
   visibility: visible; 
