@@ -139,6 +139,11 @@ z-index: 3000;
   padding: 0 rem(16.4px);
   vertical-align: super;
   transition: .5s;
+    &:hover,
+    &:active,
+    &:focus {
+    color:$yellow;
+    }
   }
 }
 .hamburger {
@@ -177,7 +182,7 @@ margin: 0 rem(8px) 0 rem(30px);
     top: rem(18px);
     }
   }
-  &.open span {
+  &.mobile-menu-open span {
   background: darken($white, 30%);
     &:nth-child(1) {
     top: rem(16px);
@@ -213,7 +218,7 @@ visibility: hidden;
 transition: all .3s;
 overflow: hidden;
 overflow-y: auto;
-  &.open {
+  &.mobile-menu-open {
   opacity: 1;
   visibility: visible; 
   }
